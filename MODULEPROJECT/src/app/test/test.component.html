@@ -1,0 +1,16 @@
+<p>TESTTTT</p>
+<a>{{pdtstatus}}</a>
+<!--<a  [(ngModel)]="FunctionalStatus">{{FunctionalStatus}} </a>-->
+<!--<a  [(ngModel)]="buttonfunctionn">{{buttonfunctionn}} </a>-->
+<button class="btn btn-primary" [disabled]="buttonfunctionn">PRESS</button> <hr>
+<button class="btn btn-primary" (click)="ButtonFunction()">PRESS TO CHANGE</button>  <hr>
+<a>{{api.randomStatus}}</a> <hr>
+<button class="btn btn-primary" (click)="ChangeStatus()">CHANGE STATUS</button> <hr>
+
+<ul>
+  <li *ngFor="let ar of array; index as i;"> {{i+1}}  {{ar}} </li>
+</ul>
+<a [(ngModel)]="FunctionalStatus">{{FunctionalStatus}}</a>
+
+<form (submit)="doLogien()">
+  <input type="submit" class="btn btn-success" value="Login"/></form>

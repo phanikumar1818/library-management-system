@@ -1,0 +1,72 @@
+This is the actual successfull project. 
+had to use the ng - - standalone or something (have a screenshot)
+to create modules and run the project. 
+created headers, footers,login and imported css from bootstramp.
+
+Update- 2/27/24 - Video 16
+
+created a new component called test and ran some data bindings in it along with *ngFor directive.
+ran all the data bindings from the ppt slide even the two way data binding(included formmodule in app module for two way binding). Then moving to directives, did ngFor. ngIf is pending
+
+NOTE: So, when we press a button in header it isnt redirecting. have to figure out how to do that. maybe later in vides. tried chatgpt but failed
+
+Update - 2/28/24 - Video 17,18
+
+DOnje whast was told in the video, found how to redirect pages when buttons are clicked and added apis(injection or dependency i guess). Created a variable in api servie and used it in different component(test component). it worked. 
+
+NOTE: ng g s api(to create service like component). create a variable in api.service.ts and create a constructor in test.component.ts include apiservice and use.
+
+Update - 3/19/24 - Video 19
+
+Used apis in components like news. it worked fine then i tried using an api of my own and it worked but i couldnt able to acces elements that have arrays of elements in it. look at this link "https://api.dictionaryapi.dev/api/v2/entries/en/business" and look at definition in it. unable to access that . accessed phonetics-> audio tho
+
+Update - 3/25/24 - Video 20
+
+The video is about NgForms entirely. It just talksabout creating a form and using it for registeration component and adds some ngform attributes to the register component html file. thats it. tried and made some changes (ex- original:*ngIf="useremail.errors?.email , change: *ngIf="useremail.errors?.['email']). The original didint show error but it didjnt work in browser like when i entered less than 6 char username it didnt pop any error. Checked the form submission with a function in register ts. that prints in console and displays the entered form values. It worked.
+ 
+		- Video 21
+The video is about Middleware/Backend i believe and first it makes you install some node_modules(which were there for me i downloaded while setting the project up. Then we create a file called server_js.js and write some code then open terminal in project directory and run "" node server_js.js "" then we open localhost:3000 on web and can see the text. then we install "" npm install -g nodemon "" and then shut previous localhost then run in the same project directory "" nodemon server_js.js "". it worked. now we create backend folder and app.js in that, we run from server.js by including app.js in server_js.js and run. It worked.
+**Command to run in terminal is "nodemon server_js.js" runs both app.js and server_js.js content**
+
+		-Video 22 (not saved)
+
+
+DATABASE LINK - mongodb+srv://phanikumar:PHANI1818@cluster0.hdfg6sj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+or (prefer the first one tho)
+
+mongodb+srv://phanikumar:<password>@cluster0.hdfg6sj.mongodb.net/
+
+MongoDb user and pass:
+phanikumar
+PHANI1818
+
+		-Video 23(didnt enter info on here)
+its complex. took a day and half to figure out the databaseconnection. tried phpmyadmin process from youtube and it worked. displays data from backend to html and takes input from register to backend. make a home page that uses info from back end to the html home page, when clicked on cart goes to the cart page but doesnt take book info with it. included a search bar but it doesnt search books yet. tried but failed. when clicked on a product tried to redirect  to a page with only the book info but failed.
+
+NOTE: first go to xampp and run apache, php then search localhost/phpmyadmin. now. nodemon index.js to activate database then load everything on angular app
+
+Update- 3/28/24
+Made some major changes/updates, you can now click on a book and it will redirect you to the specified page you want, also when you plress on add to cart it will redirect you to the cart with the book price and info in it. 
+Tried to fix the header where logout shouldnt pop when not loged in yet but failed.
+also need to include borrow in the cart section and add admin privilages where he can do CRUD, update,edit and stuff  the database right from the site. 
+(IF POSSIBLE, fix the login user issue , this comes as the last priority if theres time left after the project completion(including css editing)). 
+
+-------------------------------
+*******************************
+
+PROJECT IS FINISHED. date-04/11/2024: 2:22am
+
+
+steps to open and run the porject.
+1. open intellij
+2. while it opens or wait till it opens.
+3. go to project directory (not bakcend directory just the project) and run "firebase deploy" to start the google firebase authentication for login verification.
+4. open xampp and run "apache", "php".
+5. now go to the backend directory(which is in project named as a backend) and from the directory run "nodemon index.js".
+6. go to "http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=dbmschool&table=register" you will see the database running.
+7. now run the angular app and do wtv u want :)))
+
+********************************
+--------------------------------
+

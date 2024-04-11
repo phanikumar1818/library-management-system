@@ -1,0 +1,268 @@
+<!--<div class="container">-->
+<!--  <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">-->
+<!--    <div class="panel panel-info" >-->
+<!--      <div class="panel-heading">-->
+<!--        <div class="panel-title">Register</div>-->
+<!--      </div>-->
+<!--      <div style="padding-top:30px" class="panel-body" >-->
+
+<link src="assets/images/favicon.png" rel="icon">
+<link src="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link src="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!--   Vendor CSS Files -->
+<link src="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link src="assets/vendor/aos/aos.css" rel="stylesheet">
+<link src="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link src="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link src="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link src="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link src="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link src="assets/css/style.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0c0b09;
+    color: #fff;
+  }
+  .container {
+    max-width: 250px;
+    margin: -100px auto 0;
+    padding: 0 15px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: -150px auto 0;
+    padding: 0 15px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  .header a {
+    color: #cda45e;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .header a:hover {
+    color: #d9ba85;
+  }
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .login-form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #1a1814;
+    border-radius: 5px;
+  }
+  .login-form h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #cda45e;
+  }
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #0c0b09;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+    outline: none;
+    border: 2px solid #cda45e;
+  }
+  .login-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #cda45e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .login-form button[type="submit"]:hover {
+    background-color: #d3af71;
+  }
+  .login-section {
+    transition: background-color 0.3s ease;
+  }
+
+  .login-section:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #cda45e;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #d3af71;
+  }
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .book {
+    width: 300px;
+    height: 450px;
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .book:hover {
+    transform: scale(1.05);
+  }
+
+  .book-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .book-info {
+    padding: 20px;
+  }
+
+  .book-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .book-author,
+  .book-genre,
+  .book-copies {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .add-to-cart-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: #0056B3;
+  }
+</style>
+
+        <span>
+          {{msg}}
+        </span>
+        <section id="hero" class="d-flex align-items-center">
+          <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+              <div class="col-lg-8">
+                <h1 class="container">Welcome to <span>LMS</span></h1>
+
+
+                <div class="container">
+                  <div class="login-form">
+                    <h2>Register</h2>
+        <form (submit)="onSubmit(f)" #f="ngForm">
+
+
+            <input type="text" class="form-control"  name="uname" ngModel placeholder="Username" #username="ngModel" required minlength="6">
+
+          <p class="alert alert-danger"
+             *ngIf="username.errors?.['required'] && username.touched">
+            Please Enter Username
+          </p>
+
+          <p class="alert alert-danger"
+             *ngIf="username.errors?.['minlength'] && username.touched">
+            Please Enter Username minimum 6 characters
+          </p>
+
+
+
+
+            <input type="text" class="form-control"  name="uemail" ngModel #useremail="ngModel" placeholder="Email" required email>
+
+
+
+          <p class="alert alert-danger"
+             *ngIf="useremail.errors?.['required'] && useremail.touched">
+            Please Enter Email id
+          </p>
+          <p class="alert alert-danger"
+             *ngIf="useremail.errors?.['email'] && useremail.touched">
+            Please Enter valid email
+          </p>
+
+
+            <input type="password" class="form-control"  name="upassword" ngModel placeholder="Password">
+
+
+
+
+            <input type="text" class="form-control"  name="uphone" ngModel placeholder="Phone Number"
+                   pattern="^(0|[1-9][0-9]*)$" #userphone="ngModel">
+
+
+          <p class="alert alert-danger"
+             *ngIf="userphone.errors?.['pattern']">
+            Please Enter Nos only
+          </p>
+          <div style="margin-top:10px" class="form-group">
+            <!-- Button -->
+            <div class="col-sm-12">
+<!--              <input type="submit" class="btn btn-success" value="Register"-->
+<!--                     [disabled]="f.invalid"/> &nbsp;-->
+<!--              Already have Account? <a routerLink="/">Login</a>-->
+              <button class="glightbox play-btn" type="submit" value="Register" [disabled]="f.invalid"></button>
+            </div>
+          </div>
+        </form>
+
+
+      </div>
+                  <div class="btns">
+                    <a routerLink="/" class="btn-menu animated fadeInUp scrollto">Back to Login</a>
+
+                  </div>
+    </div>
+  </div>
+
+
+</div>
+          </div>
+        </section>

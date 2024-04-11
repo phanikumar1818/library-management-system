@@ -1,0 +1,44 @@
+<div class="container">
+  <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info" >
+      <div class="panel-heading">
+        <div class="panel-title text-center">News</div>
+        <!-- {{api.accountStatus}} -->
+      </div>
+      <div style="padding-top:30px" class="panel-body" >
+        <img src="assets/images/news.jpg" alt="news" style="width: 200px;height: 100px; margin-right: auto; margin-left: auto; display: block;" />
+        <br>
+        <select name="newscat" style="width: 100%;padding: 10px;" #newscat (change)="getnewsts(newscat.value)">
+          <option value="select">Select Category</option>
+          <option value="all">All</option>
+          <option value="business">Business</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="health">Health</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="technology">Technology</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isShowResult">
+  Loading...
+</div>
+
+<div class="container" *ngIf="isShowResult">
+  <div *ngFor="let news of newsData">
+    <div class="col-md-3 newstab">
+      <img src="{{news.urlToImage}}" class="img-responsive" style="height: 150px;" />
+      <h6 style="font-weight: 900;">{{news.title | slice:0:20}}...</h6>
+      <p>{{news.description | slice:0:50}}...</p>
+      <hr>
+      <a href="{{news.url}}" target="_blank"><button type="button" class="btn-success">Read More...</button> </a>
+      <br><br>
+    </div>
+  </div>
+
+</div>
+
+<br><br><br><br>

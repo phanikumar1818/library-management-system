@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .search-bar {
+      margin-bottom: 20px;
+    }
+    .search-bar input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .books {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .book {
+      width: calc(25% - 20px);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .book img {
+      max-width: 100%;
+      height: auto;
+    }
+    .book h2 {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .book p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .my-button {
+      /*  display: inline-block;*/
+      /*border: 2px solid #cda45e;*/
+      /*!*background-color: #cda45e; !* Gold color *!*!*/
+      /*color: #fff;  !* White text color *!*/
+      /*padding: 10px 20px;  !* Adjust padding for desired size *!*/
+      /*border-radius: 5px;  !* Rounded corners *!*/
+      /*cursor: pointer;  !* Indicates interactive element on hover *!*/
+      /*transition: background-color 0.3s ease;
+      !* Transition for hover effect *!*/
+      font-weight: 200;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 50px;
+      transition: 0.3s;
+      line-height: 1;
+      color: white;
+      background-color: #0c0b09;
+      border: 2px solid #cda45e;
+    }
+
+    .my-button:hover {
+      background-color: #cda45e;
+      color: #fff;/* Lighter gold on hover */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="search-bar">
+    <!--    <input type="text" placeholder="Search..." (input)="onSearch($event)">-->
+    <input type="text" placeholder="Search...">
+  </div>
+
+
+
+
+  <h1>Welcome to Our Library</h1>
+  <div class="books">
+    <div *ngFor="let user of users" class="book"  (click)="editBook(user.Id)">
+      <a  >
+        <!--        <img src="assets/images/th (2).jpeg" alt="Book">-->
+        <!--        <img src="{{news.urlToImage}}" class="img-responsive" style="height: 150px;" />-->
+        <img src="{{ user.Image }}" alt="Book" style="width: 300px; height: 400px;">
+
+        <h2>Book Title: {{ user.Title }}</h2>
+        <p>Author: {{ user.Author }}</p>
+        <p>Genre: {{ user.Genre }}</p>
+        <p>Available Copies: {{ user.Copies }}</p>
+        <br>
+        <div style="margin-top: 10px;">
+          <button class="my-button" (click)="editBook(user.Id)">Edit</button>
+          <button class="my-button" (click)="deleteBook(user.Id)" >Delete</button>
+<!--          <button class="my-button">Edit</button>-->
+        </div>
+      </a>
+<!--      <button routerLink="/cart" (click)="navigateToBookCart(user.Id)">Add to Cart</button>-->
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Library Home</title>-->
+<!--  <style>-->
+<!--    /* Your existing CSS styles */-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--  <div class="search-bar">-->
+<!--    <input type="text" placeholder="Search...">-->
+<!--  </div>-->
+
+<!--  <h1>Welcome to Our Library</h1>-->
+<!--  <div class="books">-->
+<!--    <div *ngFor="let user of users" class="book">-->
+<!--      <a>-->
+<!--        <img src="{{ user.Image }}" alt="Book" style="width: 300px; height: 400px;">-->
+<!--        <h2>Book Title: {{ user.Title }}</h2>-->
+<!--        <p>Author: {{ user.Author }}</p>-->
+<!--        <p>Genre: {{ user.Genre }}</p>-->
+<!--        <p>Available Copies: {{ user.Available_copies }}</p>-->
+<!--      </a>-->
+<!--      <div style="margin-top: 10px;">-->
+<!--        <button (click)="editBook(user.Id)">Edit</button>-->
+<!--        <button (click)="deleteBook(user.Id)">Delete</button>-->
+<!--      </div>-->
+<!--      <button routerLink="/cart" (click)="navigateToBookCart(user.Id)">Add to Cart</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

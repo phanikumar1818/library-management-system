@@ -1,0 +1,285 @@
+<!---- START OF OLD CODE-->
+<!--        <form #f="ngForm" (submit)="login(f)">-->
+<link src="assets/images/favicon.png" rel="icon">
+<link src="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link src="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!--   Vendor CSS Files -->
+<link src="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link src="assets/vendor/aos/aos.css" rel="stylesheet">
+<link src="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link src="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link src="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link src="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link src="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link src="assets/css/style.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0c0b09;
+    color: #fff;
+  }
+  .container {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .containerzz {
+    max-width: 450px;
+    margin: 0px auto 0;
+    padding: 0 15px;
+  }
+  .containerzz {
+    max-width: 450px;
+    margin: 0px auto 0;
+    padding: 0 15px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: -150px auto 0;
+    padding: 0 15px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  .header a {
+    color: #cda45e;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .header a:hover {
+    color: #d9ba85;
+  }
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .login-form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #1a1814;
+    border-radius: 5px;
+  }
+  .login-form h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #cda45e;
+  }
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #0c0b09;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+    outline: none;
+    border: 2px solid #cda45e;
+  }
+  .login-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #cda45e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .login-form button[type="submit"]:hover {
+    background-color: #d3af71;
+  }
+  .login-section {
+    transition: background-color 0.3s ease;
+  }
+
+  .login-section:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #cda45e;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #d3af71;
+  }
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .book {
+    width: 300px;
+    height: 450px;
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .book:hover {
+    transform: scale(1.05);
+  }
+
+  .book-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .book-info {
+    padding: 20px;
+  }
+
+  .book-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .book-author,
+  .book-genre,
+  .book-copies {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .add-to-cart-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: #0056B3;
+  }
+</style>
+
+<!--        <div class="container">-->
+
+<!--          <div class="login-form">-->
+<!--            <h2>Login</h2>-->
+<!--&lt;!&ndash;            <form action="login.php" method="post" (ngSubmit)="chatlogin()">&ndash;&gt;-->
+<!--&lt;!&ndash;              <input type="text" [(ngModel)]="email" name="uname" placeholder="Email" required>&ndash;&gt;-->
+<!--&lt;!&ndash;              <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>&ndash;&gt;-->
+
+<!--&lt;!&ndash;              <button type="submit" class="glightbox play-btn">Login</button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              Don't have Account? <a routerLink="/register">Register</a> </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div>  Admin? <a routerLink="/admin">Admin Login</a> </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </form>&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <form #f="ngForm" (submit)="login(f)" (ngSubmit)="chatlogin()">-->
+<!--          <div style="margin-bottom: 25px" class="input-group">-->
+<!--            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+<!--            <input type="email" class="form-control" [(ngModel)]="email" name="uname" placeholder="Email">-->
+
+<!--&lt;!&ndash;            <input type="text" class="form-control"  name="uname" ngModel placeholder="username" >&ndash;&gt;-->
+<!--          </div>-->
+
+<!--          <div style="margin-bottom: 25px" class="input-group">-->
+<!--            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
+<!--            <input type="password" class="form-control" [(ngModel)]="password" name="upassword" placeholder="Password">-->
+<!--&lt;!&ndash;            <input type="password" class="form-control"  name="upassword" ngModel placeholder="password">&ndash;&gt;-->
+<!--          </div>-->
+<!--          <div style="margin-top:10px" class="form-group">-->
+<!--            &lt;!&ndash; Button &ndash;&gt;-->
+<!--            <div class="col-sm-12">-->
+<!--              <button class="btn btn-success" type="submit">Login</button>-->
+<!--&lt;!&ndash;              <input type="submit" routerLink="/homepage" (click)="islogin()" class="btn btn-success" value="Login_Dummy"/> &nbsp;&ndash;&gt;-->
+<!--              Don't have Account? <a routerLink="/register">Register</a>-->
+<!--                ***  Admin? <a routerLink="/admin">Admin Login</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </form>-->
+<!--        <br>  <br><br>-->
+<!---- END OF OLD CODE-->
+
+<!---- START OF NEW CODE-->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="container">Welcome to <span>LMS</span></h1>
+
+
+
+        <!--        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">-->
+        <!--          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>-->
+        <!--        </div>-->
+        <!--        <form #f="ngForm" (submit)="login(f)" (ngSubmit)="chatlogin()">-->
+
+        <div class="container">
+          <div class="login-form">
+            <h2>Login</h2>
+            <form #f="ngForm" (submit)="login(f)" (ngSubmit)="chatlogin()">
+
+              <!--            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+              <!--            <input type="email" class="form-control" &lt;!&ndash;[(ngModel)]="email"&ndash;&gt; name="uname" placeholder="Email">-->
+              <input type="text" class="form-control" [(ngModel)]="email" name="uname" placeholder="Email">
+              <!--            <input type="text" class="form-control"  name="uname" ngModel placeholder="username" >-->
+
+
+
+              <!--            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
+              <input type="password" class="form-control" [(ngModel)]="password" name="upassword" placeholder="Password">
+              <!--            <input type="password" class="form-control"  name="upassword" ngModel placeholder="password">-->
+
+
+              <!-- Button -->
+
+              <button class="glightbox play-btn" type="submit"></button>
+              <!--                            <input type="submit" routerLink="/homepage" (click)="islogin()" class="btn btn-success" value="Login_Dummy"/> &nbsp;-->
+              <!--              Don't have Account? <a routerLink="/register">Register</a>-->
+              <!--              ***  Admin? <a routerLink="/admin">Admin Login</a>-->
+
+
+            </form>
+          </div>
+          <div class="btns">
+            <a routerLink="/register" class="btn-menu animated fadeInUp scrollto">Register</a>
+            <a routerLink="/admin" class="btn-book animated fadeInUp scrollto">Admin Login</a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero -->
